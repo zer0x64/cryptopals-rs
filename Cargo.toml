@@ -6,6 +6,7 @@ members = [
     "set1/chal4",
     "set1/chal5",
     "set1/chal6",
+    "set1/chal7",
     "single-byte-xor",
 ]
 resolver = "2"
