@@ -1,5 +1,5 @@
 [package]
-name = "chal7"
+name = "ecb"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,6 +7,4 @@ edition = "2021"
 
 [dependencies]
 aes = "0.8.4"
-anyhow = "1.0.79"
-base64 = "0.21.7"
-ecb = { path = "../../ecb" }
+pkcs7 = { path = "../pkcs7" }
