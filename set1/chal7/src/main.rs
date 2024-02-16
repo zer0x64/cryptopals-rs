@@ -9,7 +9,7 @@ fn get_ciphertext() -> Result<Vec<u8>> {
     Ok(BASE64_STANDARD.decode(include_str!("../ciphertext.txt").replace("\n", ""))?)
 }
 
-fn decrypt_aes128_ecb_pkcs7(ciphertext: &[u8], key: &[u8; 16]) -> Vec<u8> {
+fn decrypt_aes128_ecb_pkcs7(ciphertext: &[u8], key: &[u8; 16]) -> Result<Vec<u8>> {
     let key = GenericArray::from(*key);
     let cipher = Aes128::new(&key);
 
@@ -23,16 +23,16 @@ fn decrypt_aes128_ecb_pkcs7(ciphertext: &[u8], key: &[u8; 16]) -> Vec<u8> {
     let mut plaintext = blocks.concat();
 
     // Handle pkcs7 padding
-    plaintext.resize(plaintext.len() - plaintext[plaintext.len() - 1] as usize, 0);
+    pkcs7::unpad(&mut plaintext)?;
 
-    plaintext
+    Ok(plaintext)
 }
 
 fn main() -> Result<()> {
     let ciphertext = get_ciphertext()?;
     let key = b"YELLOW SUBMARINE";
 
-    let plaintext = decrypt_aes128_ecb_pkcs7(&ciphertext, key);
+    let plaintext = decrypt_aes128_ecb_pkcs7(&ciphertext, key)?;
 
     println!("{}", String::from_utf8(plaintext).unwrap());
 

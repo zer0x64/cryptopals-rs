@@ -52,6 +52,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "chal10"
+version = "0.1.0"
+dependencies = [
+ "aes",
+ "anyhow",
+ "base64 0.21.7",
+ "pkcs7",
+]
+
+[[package]]
 name = "chal2"
 version = "0.1.0"
 dependencies = [
