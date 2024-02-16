@@ -9,3 +9,4 @@ edition = "2021"
 hex-literal = "0.3.4"
 lazy_static = "1.4.0"
 rayon = "1.5.1"
+single-byte-xor = {path = "../../single-byte-xor"}
