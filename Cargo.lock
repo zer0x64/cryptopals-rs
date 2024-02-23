@@ -88,6 +88,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "chal13"
+version = "0.1.0"
+dependencies = [
+ "ecb",
+ "lazy_static",
+ "rand",
+]
+
+[[package]]
 name = "chal2"
 version = "0.1.0"
 dependencies = [
