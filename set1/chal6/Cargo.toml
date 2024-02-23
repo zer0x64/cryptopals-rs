@@ -12,4 +12,4 @@ hex = "0.4.3"
 itertools = "0.12.1"
 lazy_static = "1.4.0"
 rayon = "1.8.1"
-single-byte-xor = { path = "../../single-byte-xor" }
+single-byte-xor = { path = "../../crates/single-byte-xor" }

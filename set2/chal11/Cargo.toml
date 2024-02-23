@@ -6,6 +6,6 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-cbc = { path = "../../cbc" }
-ecb = { path = "../../ecb" }
+cbc = { path = "../../crates/cbc" }
+ecb = { path = "../../crates/ecb" }
 rand = "0.8.5"

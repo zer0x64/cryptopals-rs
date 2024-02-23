@@ -9,4 +9,4 @@ edition = "2021"
 aes = "0.8.4"
 anyhow = "1.0.79"
 base64 = "0.21.7"
-cbc = { path = "../../cbc" }
+cbc = { path = "../../crates/cbc" }

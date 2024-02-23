@@ -11,9 +11,9 @@ members = [
     "set2/chal9",
     "set2/chal10",
     "set2/chal11",
-    "cbc",
-    "ecb",
-    "single-byte-xor",
-    "pkcs7",
+    "crates/cbc",
+    "crates/ecb",
+    "crates/single-byte-xor",
+    "crates/pkcs7",
 ]
 resolver = "2"
