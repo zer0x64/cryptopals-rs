@@ -28,7 +28,7 @@ fn find_blocksize() -> usize {
 
         if ciphertext.len() > last_size {
             if reset {
-                break current_size - new_block_start
+                break current_size - new_block_start;
             } else {
                 last_size = ciphertext.len();
                 new_block_start = current_size;
@@ -76,7 +76,7 @@ fn find_secret_size(blocksize: usize) -> usize {
         let ciphertext = black_box(&plaintext);
 
         if ciphertext.len() > initial_size {
-            break ciphertext.len() - blocksize - current_size
+            break ciphertext.len() - blocksize - current_size;
         }
 
         current_size += 1;
@@ -102,13 +102,11 @@ fn crack_secret(blocksize: usize, secret_size: usize) -> String {
                 known_string = known_string + &guess.to_string();
                 break;
             }
-        };
+        }
     }
 
     known_string
 }
-
-
 
 fn main() {
     let blocksize = find_blocksize();
@@ -118,7 +116,7 @@ fn main() {
         println!("The black box doesn't use ECB! Aborting...");
         return;
     }
-    
+
     println!("The black box uses ECB!");
     let secret_size = find_secret_size(blocksize);
 

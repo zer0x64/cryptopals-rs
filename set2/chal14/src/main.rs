@@ -112,7 +112,10 @@ fn find_secret_size(blocksize: usize, prefix_size: usize) -> usize {
         let ciphertext = black_box(&plaintext);
 
         if ciphertext.len() > initial_size {
-            break ciphertext.len() - blocksize - current_size - (prefix_size / blocksize + 1) * blocksize;
+            break ciphertext.len()
+                - blocksize
+                - current_size
+                - (prefix_size / blocksize + 1) * blocksize;
         }
 
         current_size += 1;
@@ -126,7 +129,9 @@ fn crack_secret(blocksize: usize, prefix_size: usize, secret_size: usize) -> Str
         let blocksize = (i / blocksize + 1) * blocksize;
         let offset = (prefix_size / blocksize + 1) * blocksize;
 
-        let plaintext = "A".repeat(blocksize - prefix_size % blocksize + blocksize - i - 1).to_string();
+        let plaintext = "A"
+            .repeat(blocksize - prefix_size % blocksize + blocksize - i - 1)
+            .to_string();
         let second_block = black_box(&plaintext.as_bytes())[offset..offset + blocksize].to_vec();
 
         for guess in (0..127u8).map(|x| x as char) {

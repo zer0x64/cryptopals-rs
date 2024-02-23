@@ -107,6 +107,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "chal15"
+version = "0.1.0"
+dependencies = [
+ "pkcs7",
+]
+
+[[package]]
 name = "chal2"
 version = "0.1.0"
 dependencies = [
