@@ -13,6 +13,7 @@ members = [
     "set2/chal11",
     "set2/chal12",
     "set2/chal13",
+    "set2/chal14",
     "crates/cbc",
     "crates/ecb",
     "crates/single-byte-xor",
