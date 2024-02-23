@@ -11,6 +11,7 @@ members = [
     "set2/chal9",
     "set2/chal10",
     "set2/chal11",
+    "set2/chal12",
     "crates/cbc",
     "crates/ecb",
     "crates/single-byte-xor",

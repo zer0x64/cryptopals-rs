@@ -79,6 +79,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "chal12"
+version = "0.1.0"
+dependencies = [
+ "base64 0.21.7",
+ "ecb",
+ "lazy_static",
+]
+
+[[package]]
 name = "chal2"
 version = "0.1.0"
 dependencies = [
