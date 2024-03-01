@@ -15,9 +15,10 @@ members = [
     "set2/chal13",
     "set2/chal14",
     "set2/chal15",
+    "set2/chal16",
     "crates/cbc",
     "crates/ecb",
     "crates/single-byte-xor",
-    "crates/pkcs7",
+    "crates/pkcs7", "set2/chal16",
 ]
 resolver = "2"
