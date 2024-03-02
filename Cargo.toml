@@ -22,6 +22,6 @@ members = [
     "crates/ecb",
     "crates/single-byte-xor",
     "crates/pkcs7",
-    "crates/ctr", "set3/chal19",
+    "crates/ctr", "set3/chal19", "set3/chal20",
 ]
 resolver = "2"
