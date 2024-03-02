@@ -123,6 +123,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "chal17"
+version = "0.1.0"
+dependencies = [
+ "base64 0.21.7",
+ "cbc",
+ "lazy_static",
+ "pkcs7",
+ "rand",
+]
+
+[[package]]
 name = "chal2"
 version = "0.1.0"
 dependencies = [

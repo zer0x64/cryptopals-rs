@@ -21,7 +21,7 @@ pub fn unpad(data: &mut Vec<u8>) -> Result<(), InvalidPadding> {
     let pad_length = data[data.len() - 1];
 
     // Validate padding
-    if pad_length as usize >= data.len() {
+    if pad_length == 0 || pad_length as usize >= data.len() {
         return Err(InvalidPadding);
     }
 
