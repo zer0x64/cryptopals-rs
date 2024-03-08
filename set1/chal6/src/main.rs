@@ -104,11 +104,6 @@ fn get_distance(x: &[u8], y: &[u8]) -> usize {
         .sum()
 }
 
-#[test]
-fn test_get_distance() {
-    assert_eq!(get_distance(b"this is a test", b"wokka wokka!!!"), 37);
-}
-
 fn main() -> Result<()> {
     let ciphertext = get_ciphertext()?;
     let keysizes = find_keysize(&ciphertext, 1);
@@ -126,4 +121,9 @@ fn main() -> Result<()> {
     }
 
     Ok(())
+}
+
+#[test]
+fn test_get_distance() {
+    assert_eq!(get_distance(b"this is a test", b"wokka wokka!!!"), 37);
 }
