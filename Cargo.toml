@@ -18,6 +18,6 @@ members = [
     "crates/cbc",
     "crates/ecb",
     "crates/single-byte-xor",
-    "crates/pkcs7",
+    "crates/pkcs7", "crates/mt19937",
 ]
 resolver = "2"

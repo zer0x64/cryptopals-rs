@@ -339,6 +339,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "mt19937"
+version = "0.1.0"
+dependencies = [
+ "rand",
+ "rand_core",
+]
+
+[[package]]
 name = "pkcs7"
 version = "0.1.0"
 dependencies = [
