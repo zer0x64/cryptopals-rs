@@ -175,6 +175,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "chal22"
+version = "0.1.0"
+dependencies = [
+ "mt19937",
+ "rand",
+]
+
+[[package]]
 name = "chal3"
 version = "0.1.0"
 dependencies = [

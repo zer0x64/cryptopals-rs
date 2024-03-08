@@ -20,6 +20,7 @@ members = [
     "set3/chal18",
     "set3/chal19",
     "set3/chal20",
+    "set3/chal22",
     "crates/cbc",
     "crates/ecb",
     "crates/single-byte-xor",
