@@ -17,27 +17,30 @@ fn main() {
     let mut output = [0u32; 624];
 
     rng.fill(output.as_mut_slice());
-    //for o in output.iter_mut() {
-    //    *o = rng.next_u32();
-    //};
 
     for y in output.iter_mut() {
         *y ^= *y >> CONST_L;
 
         *y ^= (*y << CONST_T) & CONST_C;
 
-        // wtf is this sorcery
-        let mut intermediate = *y;
-        for _ in 0..4 {
-            intermediate = *y ^ (intermediate << CONST_S) & CONST_B;
+        let mut intermediate = 0u32;
+        for i in 0..(32 / CONST_S + 1) {
+            let mask = ((1 << (CONST_S)) - 1) << (CONST_S * i);
+            intermediate |= (*y ^ ((intermediate << CONST_S) & CONST_B)) & mask;
         }
 
         *y = intermediate;
 
-        let mut intermediate = *y;
-        for _ in 0..3 {
-            intermediate = *y ^ (intermediate >> CONST_U);
-        }
+        // let mut intermediate = *y;
+        // for _ in 0..3 {
+        //     intermediate = *y ^ (intermediate >> CONST_U);
+        // }
+
+        let mut intermediate = 0u32;
+        for i in 0..(32 / CONST_U + 1) {
+            let mask = ((1 << (CONST_U)) - 1) << (CONST_U * (32 / CONST_U - i));
+            intermediate |= (*y ^ (intermediate >> CONST_U)) & mask;
+        };
 
         *y = intermediate;
     }
@@ -52,4 +55,6 @@ fn main() {
     rng2.fill(output2.as_mut_slice());
 
     assert_eq!(output1, output2);
+
+    println!("It works!")
 }
