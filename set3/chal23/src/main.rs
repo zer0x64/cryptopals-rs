@@ -31,11 +31,6 @@ fn main() {
 
         *y = intermediate;
 
-        // let mut intermediate = *y;
-        // for _ in 0..3 {
-        //     intermediate = *y ^ (intermediate >> CONST_U);
-        // }
-
         let mut intermediate = 0u32;
         for i in 0..(32 / CONST_U + 1) {
             let mask = ((1 << (CONST_U)) - 1) << (CONST_U * (32 / CONST_U - i));
