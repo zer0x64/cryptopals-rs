@@ -1,0 +1,9 @@
+[package]
+name = "chal24"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+lazy_static = "1.4.0"
+mt19937 = { path = "../../crates/mt19937" }
+rand = "0.8.5"

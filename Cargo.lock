@@ -191,6 +191,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "chal24"
+version = "0.1.0"
+dependencies = [
+ "lazy_static",
+ "mt19937",
+ "rand",
+]
+
+[[package]]
 name = "chal3"
 version = "0.1.0"
 dependencies = [
